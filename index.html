@@ -3,141 +3,167 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#080612">
-<title>FF CALIBRATOR PRO</title>
+<meta name="theme-color" content="#070b18">
+<title>FF Calibrator Pro</title>
 <style>
-:root{--bg:#070611;--panel:#100d1c;--panel2:#151126;--line:#29223c;--txt:#f8f7ff;--muted:#9d96ad;--a:#9b5cff;--b:#21d8ff;--ok:#36e5a1;--danger:#ff5d87}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% -10%,#2b1350 0,transparent 32%),radial-gradient(circle at -10% 30%,#062d3b 0,transparent 28%),var(--bg);color:var(--txt);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-button,input,select{font:inherit}.app{max-width:1050px;margin:auto;padding:18px 15px 55px}
-.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.brand{display:flex;gap:12px;align-items:center}.logo{width:46px;height:46px;border-radius:15px;display:grid;place-items:center;font-weight:1000;color:#080612;background:linear-gradient(135deg,#b86cff,#20e5ff);box-shadow:0 0 30px #8b4cff55}.brand h1{font-size:17px;margin:0}.brand p{font-size:10px;color:var(--muted);margin:3px 0 0}.status{border:1px solid #26394a;background:#0c1720;border-radius:999px;padding:8px 11px;font-size:10px;color:#83f3c7}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ok);margin-right:5px;box-shadow:0 0 10px var(--ok)}
-.hero{padding:22px;border:1px solid var(--line);border-radius:25px;background:linear-gradient(135deg,#151027cc,#0c1720aa);box-shadow:0 20px 70px #0008;margin-bottom:14px}.hero h2{font-size:30px;line-height:1.05;margin:0 0 8px}.hero h2 span{background:linear-gradient(90deg,#c18aff,#38dcff);color:transparent;background-clip:text}.hero p{color:var(--muted);font-size:13px;max-width:680px;margin:0 0 17px}.heroBtns{display:flex;gap:9px;flex-wrap:wrap}.btn{border:0;border-radius:13px;padding:12px 15px;font-weight:900;color:white;background:linear-gradient(100deg,#8d4dff,#18c9ee);box-shadow:0 10px 25px #7b45ff25;cursor:pointer}.btn.alt{background:#19142a;border:1px solid var(--line);box-shadow:none}.layout{display:grid;grid-template-columns:1.15fr .85fr;gap:14px}.card{background:linear-gradient(180deg,#130f21,#0e0b17);border:1px solid var(--line);border-radius:21px;padding:16px;box-shadow:0 14px 45px #0004}.wide{grid-column:1/-1}.title{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px}.title h3{font-size:14px;margin:0}.title small{font-size:10px;color:var(--muted)}.device{display:flex;align-items:center;gap:12px;background:#0b0913;border:1px solid #262036;padding:12px;border-radius:15px}.phone{width:42px;height:42px;border-radius:13px;background:#1d1730;display:grid;place-items:center;font-size:20px}.device b{font-size:13px}.device span{display:block;color:var(--muted);font-size:10px;margin-top:3px}.profiles{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.profile{background:#0b0913;border:1px solid #2b2340;border-radius:13px;color:#dcd7e8;padding:11px 5px;font-size:10px;cursor:pointer}.profile strong{display:block;font-size:17px;margin-bottom:4px}.profile.active{border-color:#9a58ff;background:linear-gradient(180deg,#2a1748,#151026);box-shadow:0 0 18px #984eff22}.field{margin-top:13px}.field label{font-size:10px;color:#bcb5c9;display:flex;justify-content:space-between;margin-bottom:7px}.range{display:grid;grid-template-columns:1fr 55px;gap:8px;align-items:center}.range input{width:100%;accent-color:#9b5cff}.num{background:#0a0810;border:1px solid #2c2440;border-radius:10px;padding:8px;text-align:center;font-weight:900;font-size:12px}.select{width:100%;background:#0a0810;color:white;border:1px solid #2c2440;border-radius:11px;padding:10px}.switch{display:flex;align-items:center;justify-content:space-between;background:#0b0913;border:1px solid #282039;padding:10px 12px;border-radius:12px;font-size:11px}.switch input{accent-color:#9b5cff}.sensgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.sens{background:#0b0913;border:1px solid #282039;border-radius:15px;padding:12px}.sens .name{font-size:10px;color:#aaa2b8}.sens .value{font-size:25px;font-weight:1000;margin-top:4px}.bar{height:5px;border-radius:9px;background:#211a30;margin-top:8px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#9b5cff,#25dfff);border-radius:9px}.feedback{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.feed{background:#0b0913;color:#ddd;border:1px solid #29223a;border-radius:12px;padding:11px 5px;font-size:10px;cursor:pointer}.feed:hover{border-color:#8f52ee}.training{display:grid;grid-template-columns:1fr 1fr;gap:12px}.target{min-height:190px;border:1px solid #2a2240;border-radius:17px;background:radial-gradient(circle at 50% 50%,#43216c 0,#17102a 20%,#0a0811 62%);display:grid;place-items:center;position:relative;overflow:hidden}.cross{width:70px;height:70px;border:2px solid #35dcff;border-radius:50%;box-shadow:0 0 30px #21d8ff66;position:relative}.cross:before,.cross:after{content:"";position:absolute;background:#35dcff}.cross:before{width:100px;height:2px;left:-17px;top:33px}.cross:after{height:100px;width:2px;left:33px;top:-17px}.meter{background:#0b0913;border:1px solid #282039;border-radius:15px;padding:14px}.meter h4{margin:0 0 8px;font-size:12px}.meter .score{font-size:38px;font-weight:1000}.meter p{font-size:10px;color:var(--muted)}.saved{display:grid;gap:7px}.saveRow{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px;background:#0b0913;border:1px solid #282039;border-radius:12px;font-size:10px}.saveRow button{border:0;background:#211632;color:#ddd;border-radius:9px;padding:7px 9px;font-size:10px}.toast{position:fixed;left:50%;bottom:20px;transform:translate(-50%,120px);background:#171126;border:1px solid #4a356a;padding:11px 14px;border-radius:12px;font-size:11px;box-shadow:0 15px 45px #0008;transition:.25s;z-index:5}.toast.show{transform:translate(-50%,0)}footer{text-align:center;color:#625a6e;font-size:9px;margin-top:18px}
-@media(max-width:760px){.layout{grid-template-columns:1fr}.wide{grid-column:auto}.hero h2{font-size:25px}.sensgrid{grid-template-columns:repeat(2,1fr)}.training{grid-template-columns:1fr}.status{display:none}}
-@media(max-width:430px){.profiles{grid-template-columns:repeat(2,1fr)}.feedback{grid-template-columns:repeat(2,1fr)}}
+:root{--bg:#050817;--card:#0b1124;--line:#26345d;--text:#f7f8ff;--muted:#a8b0c9;--purple:#8b35ff;--blue:#159cff;--green:#16d97b;--yellow:#ffc928;--red:#ef334c}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#29104d 0,#090d1d 35%,#040610 80%);color:var(--text);font-family:Arial,Helvetica,sans-serif;min-height:100vh}
+.wrap{max-width:760px;margin:auto;padding:18px 14px 34px}
+header{text-align:center;padding:6px 0 18px;position:relative}
+.logo{font-size:30px;font-weight:900;letter-spacing:.5px}.logo span:first-child{color:#fff}.logo span:nth-child(2){color:var(--purple)}.logo span:last-child{color:var(--blue)}
+.sub{color:#9ca6c2;font-size:15px;margin-top:4px}
+.card{background:linear-gradient(145deg,#0c1228,#080c1b);border:1px solid var(--line);border-radius:22px;padding:18px;margin-top:12px;box-shadow:0 12px 35px #0007}
+.label{font-weight:900;font-size:16px;margin-bottom:10px;display:flex;align-items:center;gap:9px}.label small{color:var(--muted);font-weight:500;margin-left:auto}
+select,input{width:100%;border:1px solid #354570;background:#131c38;color:#fff;border-radius:14px;padding:15px;font-size:16px;outline:none}
+select:focus,input:focus{border-color:#9b5cff;box-shadow:0 0 0 3px #8b35ff22}
+.search{position:relative}.search input{padding-left:45px}.searchIcon{position:absolute;left:15px;top:13px;font-size:21px;color:#9ca6c2}
+.results{display:none;position:absolute;z-index:10;left:0;right:0;top:58px;background:#0b1020;border:1px solid #384b7d;border-radius:14px;overflow:hidden;box-shadow:0 18px 40px #000b}.results.show{display:block}
+.result{width:100%;background:none;border:0;border-bottom:1px solid #202c4d;color:#fff;text-align:left;padding:12px 14px;cursor:pointer}.result:last-child{border:0}.result b{display:block}.result span{color:var(--muted);font-size:12px}
+.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.level{border:1px solid #33415f;background:#0b1020;border-radius:15px;padding:15px 8px;font-weight:900;color:#dce2f5;font-size:16px;cursor:pointer}.level.low.active{background:#0b5d38;border-color:#18e681;box-shadow:0 0 18px #18e68155}.level.med.active{background:#765900;border-color:#ffd52c;box-shadow:0 0 18px #ffd52c55}.level.high.active{background:#7d1528;border-color:#ff3b58;box-shadow:0 0 18px #ff3b5855}
+.resultCard{border:1px solid #703cff;background:linear-gradient(145deg,#0e1530,#090b1b);padding:16px;border-radius:20px;margin-top:12px}.resultTitle{font-size:20px;font-weight:900;margin-bottom:10px}.resultTitle span{color:#a866ff}
+.row{display:grid;grid-template-columns:1fr 88px;align-items:center;border-bottom:1px solid #202c4d;padding:12px 2px}.row:last-child{border:0}.name{font-weight:800}.val{text-align:center;background:#151033;border:1px solid #6532be;color:#cdaaff;border-radius:9px;padding:8px;font-weight:900;font-size:20px}.bar{height:5px;background:#17223e;border-radius:10px;margin-top:6px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#7d31ff,#1aa8ff);border-radius:10px}
+.dpiRow{display:grid;grid-template-columns:1fr 150px;gap:10px;align-items:center}.hint{color:var(--muted);font-size:12px;margin-top:8px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.btn{border:0;border-radius:15px;padding:15px 10px;font-weight:900;font-size:14px;color:white;cursor:pointer}.primary{background:linear-gradient(135deg,#7e28ff,#a044ff);box-shadow:0 8px 22px #7e28ff44}.secondary{background:linear-gradient(135deg,#078dff,#1762ff);box-shadow:0 8px 22px #087fff33}.copy{width:100%;margin-top:10px;background:#0b1530;border:1px solid #258cff}
+.selected{color:#8fb6ff;font-size:12px;margin-top:8px;min-height:15px}.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:#10182d;border:1px solid #48639d;padding:11px 15px;border-radius:12px;opacity:0;pointer-events:none;transition:.2s;z-index:30}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:480px){.wrap{padding:12px 10px 28px}.logo{font-size:25px}.card{padding:15px;border-radius:19px}.row{grid-template-columns:1fr 78px}.val{font-size:18px}.dpiRow{grid-template-columns:1fr 125px}}
 </style>
 </head>
 <body>
-<div class="app">
-<header class="top"><div class="brand"><div class="logo">FF</div><div><h1>FF CALIBRATOR PRO</h1><p>Sensibilidad inteligente • V6 WEB</p></div></div><div class="status"><span class="dot"></span> SISTEMA LISTO</div></header>
-<section class="hero">
-<h2>Encuentra tu <span>sensibilidad ideal.</span></h2>
-<p>Configura tu dispositivo, estilo de juego y controles. Genera una recomendación y ajústala con una prueba rápida.</p>
-<div class="heroBtns"><button class="btn" onclick="document.getElementById('config').scrollIntoView()">⚡ CALIBRAR AHORA</button><button class="btn alt" onclick="document.getElementById('training').scrollIntoView()">🎯 MODO ENTRENAMIENTO</button></div>
-</section>
-<div class="layout">
-<section class="card" id="config">
-<div class="title"><h3>📱 Tu dispositivo</h3><small>AUTOMÁTICO</small></div>
-<div class="device"><div class="phone">📱</div><div><b id="deviceName">Detectando dispositivo…</b><span id="deviceInfo">Preparando datos de pantalla</span></div></div>
-<div class="title" style="margin-top:18px"><h3>🎮 Perfil de juego</h3><small>ELIGE UNO</small></div>
-<div class="field"><label>Nivel de sensibilidad</label>
-<div class="profiles" id="levels">
-<button class="profile" data-level="low"><strong>🟢</strong>BAJA</button>
-<button class="profile active" data-level="medium"><strong>🟡</strong>MEDIA</button>
-<button class="profile" data-level="high"><strong>🔴</strong>ALTA</button>
-</div></div>
-<div class="profiles">
-<button class="profile" data-profile="head"><strong>🔥</strong>HEADSHOT</button>
-<button class="profile" data-profile="fast"><strong>⚡</strong>RÁPIDO</button>
-<button class="profile active" data-profile="balanced"><strong>⚖️</strong>EQUILIBRADO</button>
-<button class="profile" data-profile="precise"><strong>🎯</strong>PRECISO</button>
-</div>
-<div class="field"><label>Dedos</label><select id="fingers" class="select"><option value="2">2 dedos</option><option value="3">3 dedos</option><option value="4">4 dedos</option></select></div>
-<div class="field"><label>DPI <b id="dpiLabel">420</b></label><div class="range"><input id="dpi" type="range" min="200" max="800" value="420"><div class="num" id="dpiNum">420</div></div></div>
-<div class="field"><div class="switch"><span>🌀 Giroscopio</span><input id="gyro" type="checkbox"></div></div>
+<div class="wrap">
+<header>
+  <div class="logo"><span>FF </span><span>CALIBRATOR</span> <span>PRO</span></div>
+  <div class="sub">Generador rápido de sensibilidad</div>
+</header>
+
+<section class="card">
+  <div class="label">📱 SELECCIONA TU MARCA</div>
+  <select id="brand"><option value="">Selecciona una marca</option></select>
 </section>
 
 <section class="card">
-<div class="title"><h3>🎚️ Ajuste fino</h3><small>CONTROL</small></div>
-<div class="field"><label>Sensibilidad base <b id="baseLabel">100</b></label><div class="range"><input id="base" type="range" min="50" max="200" value="100"><div class="num" id="baseNum">100</div></div></div>
-<div class="field"><label>Respuesta táctil <b id="touchLabel">7/10</b></label><div class="range"><input id="touch" type="range" min="1" max="10" value="7"><div class="num" id="touchNum">7</div></div></div>
-<div class="field"><label>Agresividad de arrastre <b id="dragLabel">6/10</b></label><div class="range"><input id="drag" type="range" min="1" max="10" value="6"><div class="num" id="dragNum">6</div></div></div>
-<div class="field"><label>Objetivo</label><select id="goal" class="select"><option>Headshots</option><option>Control de recoil</option><option>Equilibrio</option><option>Precisión</option></select></div>
-<button class="btn" style="width:100%;margin-top:14px" id="generate">GENERAR CONFIGURACIÓN</button>
+  <div class="label">🔎 BUSCA TU MODELO</div>
+  <div class="search">
+    <span class="searchIcon">⌕</span>
+    <input id="model" placeholder="Ej: S23 Ultra, A54, Redmi Note 13..." autocomplete="off">
+    <div class="results" id="results"></div>
+  </div>
+  <div class="selected" id="selected"></div>
 </section>
 
-<section class="card wide">
-<div class="title"><h3>🚀 Tu configuración recomendada</h3><small id="confidence">PRECISIÓN: —</small></div>
-<div class="sensgrid" id="sensgrid"></div>
+<section class="card">
+  <div class="label">🎮 NIVEL DE SENSIBILIDAD</div>
+  <div class="levels">
+    <button class="level low" data-level="low">BAJA</button>
+    <button class="level med active" data-level="medium">MEDIA</button>
+    <button class="level high" data-level="high">ALTA</button>
+  </div>
 </section>
 
-<section class="card wide" id="training">
-<div class="title"><h3>🧪 Calibración inteligente</h3><small>PRUEBA EN ENTRENAMIENTO</small></div>
-<div class="training">
-<div class="target"><div class="cross"></div></div>
-<div>
-<div class="meter"><h4>¿Cómo sentiste la mira?</h4><div class="score" id="score">—</div><p id="feedbackText">Genera una configuración y prueba unos disparos. Después selecciona una opción.</p></div>
-<div class="feedback" style="margin-top:9px">
-<button class="feed" data-feedback="high">⬆️ Se va arriba</button>
-<button class="feed" data-feedback="low">⬇️ Se queda abajo</button>
-<button class="feed" data-feedback="slow">🐢 Está lenta</button>
-<button class="feed" data-feedback="fast">⚡ Está rápida</button>
-</div>
-</div></div>
+<section class="resultCard">
+  <div class="resultTitle">📄 CONFIGURACIÓN <span>GENERADA</span></div>
+  <div id="output"></div>
 </section>
 
-<section class="card wide">
-<div class="title"><h3>💾 Mis perfiles</h3><small>GUARDADOS EN ESTE NAVEGADOR</small></div>
-<div class="saved" id="saved"><span style="color:#777;font-size:10px">Todavía no tienes perfiles guardados.</span></div>
-<button class="btn alt" id="save" style="margin-top:9px;width:100%">＋ GUARDAR CONFIGURACIÓN ACTUAL</button>
+<section class="card">
+  <div class="label">⚙️ DPI <small>OPCIONAL</small></div>
+  <div class="dpiRow">
+    <input id="dpi" type="number" min="300" max="800" value="550">
+    <button class="btn secondary" id="autoDpi">DPI RECOMENDADO</button>
+  </div>
+  <div class="hint" id="dpiHint">Selecciona tu modelo para obtener una recomendación.</div>
 </section>
+
+<div class="actions">
+  <button class="btn primary" id="withDpi">⚡ GENERAR CON DPI</button>
+  <button class="btn secondary" id="withoutDpi">🔄 GENERAR SIN DPI</button>
 </div>
-<footer>FF Calibrator Pro es una herramienta independiente. No modifica archivos de Free Fire ni automatiza el juego.</footer>
+<button class="btn copy" id="copy">📋 COPIAR CONFIGURACIÓN</button>
 </div>
+
 <div class="toast" id="toast"></div>
+
 <script>
-const $=id=>document.getElementById(id), clamp=n=>Math.max(0,Math.min(200,Math.round(n)));
-let profile="balanced", level="medium", values={};
-function toast(t){$("toast").textContent=t;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),1800)}
-function device(){let ua=navigator.userAgent, name=/Android/i.test(ua)?"Android":navigator.platform||"Dispositivo";$("deviceName").textContent=name+" • navegador compatible";$("deviceInfo").textContent=`Pantalla ${screen.width}×${screen.height} • DPR ${devicePixelRatio} • Web calibrator`}
-function calculate(){
- let base=+$("base").value,dpi=+$("dpi").value,f=+$("fingers").value,t=+$("touch").value,d=+$("drag").value;
- base += ({head:15,fast:10,balanced:0,precise:-10}[profile]);
- base += ({low:-12,medium:0,high:12}[level]);
- base += f===2?-5:f===4?5:0;
- base += $("gyro").checked?-4:0;
- base += Math.round((dpi-420)/40)+(t-7)+(d-6);
- values={
- "General":clamp(base+10),
- "Punto rojo":clamp(base+2),
- "Mira 2x":clamp(base-8),
- "Mira 4x":clamp(base-18),
- "AWM":clamp(base-45),
- "Mira libre":clamp(base+5)
+const phones=[
+["Samsung","S23 Ultra","1440×3088","120 Hz",550],["Samsung","S24 Ultra","1440×3120","120 Hz",550],["Samsung","S24","1080×2340","120 Hz",520],["Samsung","S23","1080×2340","120 Hz",520],["Samsung","A55 5G","1080×2340","120 Hz",500],["Samsung","A54 5G","1080×2340","120 Hz",500],["Samsung","A35 5G","1080×2340","120 Hz",500],["Samsung","A25 5G","1080×2340","120 Hz",480],["Samsung","A15 5G","1080×2340","90 Hz",450],
+["Xiaomi","Redmi Note 13","1080×2400","120 Hz",500],["Xiaomi","Redmi Note 13 Pro","1220×2712","120 Hz",520],["Xiaomi","Redmi Note 13 Pro+ 5G","1220×2712","120 Hz",550],["Xiaomi","Redmi Note 12","1080×2400","120 Hz",500],["Xiaomi","Redmi Note 14","1080×2400","120 Hz",520],["Xiaomi","POCO X6 Pro 5G","1220×2712","120 Hz",550],["Xiaomi","POCO X7 Pro","1220×2712","120 Hz",550],["Xiaomi","Xiaomi 14T","1220×2712","144 Hz",550],
+["realme","C55","1080×2400","90 Hz",480],["realme","C67","1080×2400","90 Hz",480],["realme","12 Pro+ 5G","1080×2412","120 Hz",520],
+["Motorola","Moto G54 5G","1080×2400","120 Hz",500],["Motorola","Moto G84 5G","1080×2400","120 Hz",500],["Motorola","Edge 50 Fusion","1080×2400","120 Hz",520],
+["HONOR","X8b","1080×2412","90 Hz",480],["HONOR","X9b 5G","1200×2652","120 Hz",520],
+["OPPO","A58","1080×2400","90 Hz",480],["OPPO","Reno 11 5G","1080×2412","120 Hz",520],
+["vivo","Y36","1080×2388","90 Hz",480],["vivo","V30","1260×2800","120 Hz",520],
+["Tecno","Spark 20 Pro","1080×2460","120 Hz",500],["Tecno","Camon 30","1080×2436","120 Hz",500],
+["Infinix","Hot 40 Pro","1080×2460","120 Hz",500],["Infinix","Note 40 Pro","1080×2436","120 Hz",520],
+["Apple","iPhone 11","828×1792","60 Hz",420],["Apple","iPhone 12","1170×2532","60 Hz",450],["Apple","iPhone 13","1170×2532","60 Hz",450],["Apple","iPhone 14 Pro","1179×2556","120 Hz",480]
+];
+
+const brand=$("brand"),model=$("model"),results=$("results"),dpi=$("dpi"),output=$("output");
+let selected=null,level="medium";
+
+[...new Set(phones.map(p=>p[0]))].sort().forEach(b=>brand.insertAdjacentHTML("beforeend",`<option>${b}</option>`));
+
+brand.addEventListener("change",()=>{
+  model.value=""; selected=null; $("selected").textContent="";
+  results.classList.remove("show");
+  if(brand.value) showResults("");
+  generate(false);
+});
+
+function showResults(q){
+  const query=(q||"").trim().toLowerCase(), b=brand.value;
+  let list=phones.filter(p=>(!b||p[0]===b)&&((p[1]).toLowerCase().includes(query)||p[0].toLowerCase().includes(query))).slice(0,9);
+  if(!list.length){results.innerHTML='<div class="result"><b>No encontrado</b><span>Prueba otro modelo.</span></div>';results.classList.add("show");return}
+  results.innerHTML=list.map(p=>`<button class="result" data-id="${phones.indexOf(p)}"><b>${p[0]} ${p[1]}</b><span>${p[2]} · ${p[3]} · DPI ${p[4]}</span></button>`).join("");
+  results.querySelectorAll("[data-id]").forEach(btn=>btn.onclick=()=>choose(phones[+btn.dataset.id]));
+  results.classList.add("show");
+}
+model.addEventListener("input",()=>showResults(model.value));
+model.addEventListener("focus",()=>showResults(model.value));
+document.addEventListener("click",e=>{if(!e.target.closest(".search"))results.classList.remove("show")});
+
+function choose(p){
+ selected=p; brand.value=p[0]; model.value=p[1];
+ $("selected").textContent=`✓ ${p[0]} ${p[1]} · ${p[2]} · ${p[3]}`;
+ dpi.value=p[4]; $("dpiHint").textContent=`DPI recomendado para este modelo: ${p[4]}`;
+ results.classList.remove("show"); generate(false); toast("Modelo seleccionado");
+}
+document.querySelectorAll(".level").forEach(btn=>btn.onclick=()=>{
+ document.querySelectorAll(".level").forEach(x=>x.classList.remove("active"));btn.classList.add("active");
+ level=btn.dataset.level;generate(false);
+});
+
+function clamp(n){return Math.max(0,Math.min(200,Math.round(n)))}
+function generate(useDpi){
+ let base=selected?92:88;
+ const levelAdj={low:-12,medium:0,high:12}[level];
+ base+=levelAdj;
+ if(selected) base+=(selected[4]-500)/25;
+ if(useDpi) base+=(+dpi.value-500)/20;
+ const r={
+  "GENERAL":clamp(base+12),
+  "PUNTO ROJO":clamp(base-8),
+  "MIRA 2X":clamp(base+6),
+  "MIRA 4X":clamp(base+18),
+  "AWM":clamp(base-32),
+  "BOTÓN DISPARO":clamp(base-22)
  };
- render();
- let c=Math.max(72,Math.min(98,88+Math.round((10-Math.abs(dpi-420)/80)+(t-7)*2)));
- $("confidence").textContent="PRECISIÓN: "+c+"%";
+ output.innerHTML=Object.entries(r).map(([k,v])=>`<div class="row"><div><div class="name">${k}</div><div class="bar"><i style="width:${Math.min(100,v/2)}%"></i></div></div><div class="val">${v}%</div></div>`).join("");
+ window.current={...r,useDpi,dpi:+dpi.value};
 }
-function render(){
- $("sensgrid").innerHTML=Object.entries(values).map(([n,v])=>`<div class="sens"><div class="name">${n}</div><div class="value">${v}</div><div class="bar"><i style="width:${Math.min(100,v/2)}%"></i></div></div>`).join("");
-}
-["base","dpi","touch","drag"].forEach(id=>$(id).addEventListener("input",()=>{let v=$(id).value;$(id+"Num").textContent=v;if(id==="dpi")$("dpiLabel").textContent=v;if(id==="base")$("baseLabel").textContent=v;if(id==="touch"){$("touchLabel").textContent=v+"/10";}if(id==="drag")$("dragLabel").textContent=v+"/10";calculate()}));
-$("fingers").onchange=$("gyro").onchange=calculate;
-document.querySelectorAll("#levels .profile").forEach(b=>b.onclick=()=>{
- document.querySelectorAll("#levels .profile").forEach(x=>x.classList.remove("active"));
- b.classList.add("active"); level=b.dataset.level; calculate();
- toast("Nivel "+b.textContent.trim()+" seleccionado");
-});
-document.querySelectorAll(".profile").forEach(b=>b.onclick=()=>{document.querySelectorAll(".profile").forEach(x=>x.classList.remove("active"));b.classList.add("active");profile=b.dataset.profile;calculate();toast("Perfil "+b.textContent.trim()+" seleccionado")});
-$("generate").onclick=()=>{calculate();$("feedbackText").textContent="Configuración lista. Haz una prueba y dime cómo responde la mira.";toast("¡Sensibilidad generada!")};
-document.querySelectorAll(".feed").forEach(b=>b.onclick=()=>{
- if(!Object.keys(values).length)calculate();
- let delta=(b.dataset.feedback==="high"||b.dataset.feedback==="fast")?-6:6;
- Object.keys(values).forEach(k=>values[k]=clamp(values[k]+delta));render();
- $("score").textContent=delta>0?"+6":"-6";
- $("feedbackText").textContent="Ajuste aplicado. Prueba otra vez y vuelve a calibrar si hace falta.";
- toast("Ajuste automático aplicado");
-});
-$("save").onclick=()=>{
- if(!Object.keys(values).length)calculate();
- let a=JSON.parse(localStorage.ffProfiles||"[]");
- a.unshift({name:profile.toUpperCase()+" • "+new Date().toLocaleDateString("es-PE"),values});
- localStorage.ffProfiles=JSON.stringify(a.slice(0,10));showSaved();toast("Perfil guardado");
+$("withDpi").onclick=()=>{generate(true);toast("Configuración generada con DPI")};
+$("withoutDpi").onclick=()=>{generate(false);toast("Configuración generada sin DPI")};
+$("autoDpi").onclick=()=>{if(selected)dpi.value=selected[4];toast(selected?"DPI recomendado aplicado":"Primero selecciona un modelo");generate(!!selected)};
+$("copy").onclick=async()=>{
+ if(!window.current)generate(false);
+ const phone=selected?`${selected[0]} ${selected[1]}`:"Sin modelo";
+ const txt=`FF CALIBRATOR PRO
+Teléfono: ${phone}
+Nivel: ${level.toUpperCase()}
+${Object.entries(window.current).filter(([k])=>!["useDpi","dpi"].includes(k)).map(([k,v])=>`${k}: ${v}%`).join("\n")}
+DPI: ${window.current.useDpi?window.current.dpi:"No usado"}`;
+ try{await navigator.clipboard.writeText(txt);toast("Configuración copiada")}catch{toast("No se pudo copiar automáticamente")}
 };
-function showSaved(){
- let a=JSON.parse(localStorage.ffProfiles||"[]");
- $("saved").innerHTML=a.length?a.map((x,i)=>`<div class="saveRow"><span>🎮 ${x.name}</span><button onclick="loadProfile(${i})">CARGAR</button></div>`).join(""):"<span style='color:#777;font-size:10px'>Todavía no tienes perfiles guardados.</span>";
-}
-function loadProfile(i){let a=JSON.parse(localStorage.ffProfiles||"[]");values=a[i].values;render();$("feedbackText").textContent="Perfil cargado.";toast("Perfil cargado")}
-device();calculate();showSaved();
+function toast(t){const x=$("toast");x.textContent=t;x.classList.add("show");clearTimeout(window.tt);window.tt=setTimeout(()=>x.classList.remove("show"),1700)}
+generate(false);
 </script>
-</body></html>
+</body>
+</html>
